@@ -1,0 +1,65 @@
+*{
+    font-family: "Faunces", serif;
+    color: #fff
+}
+body{
+    margin:0;
+    background: linear-gradient(to right, #00aaff, #00ff6c)/* linear-gradient: nos sirve para agregar colores degradados*/
+
+}
+.container{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+}
+.calculadora{
+    display: grid; /*para poder crear una grilla*/
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: 169px repeat(5, 40px);
+    background-color: #7ce34ce4;
+    padding:15px;
+    border-radius: 30px;/*añadir border redondeados*/
+    box-shadow: 20px 25px 0px 5px #3b5f1765; /*añadir sombras*/
+}
+button{
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 30px;
+    font-size: 1,5;
+    border: none;
+    background: #51ff00dc;
+    box-shadow: 5px 5px 10px -3px #3b5f1765, -5px -5px 15px 3px  #94d256
+
+}
+
+button:active{
+    background-color: #2c540365 ;
+}
+
+.display{
+    grid-column: 1 / -1; /*sirve para dar el ancho total de donde se encuentra*/
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;/*nos permite agregar como columna la clase*/
+    align-items: flex-end;
+    background-color: #363636;
+    border-radius: 25px;
+    text-align: right;
+    justify-content: space-between;/*para que lops valores se separen*/
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000032;
+}
+
+.col-2{
+    grid-column: span 2;
+}
+
+#valor_anterior{
+     font-size: 30px;  /*darle tamaño a las letras */
+}
+#valor_actual{
+    font-size: 30px;
+}
